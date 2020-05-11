@@ -1,8 +1,6 @@
 {
-  "name": "svelte-themer",
-  "version": "0.1.4",
-  "homepage": "https://svelte-themer.now.sh",
-  "repository": "https://github.com/josefaidt/svelte-themer",
+  "name": "@centroculturadigital-mx/svelte-themer",
+  "version": "0.0.01",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
