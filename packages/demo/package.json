@@ -1,6 +1,7 @@
 {
   "name": "demo",
-  "version": "1.0.0",
+  "version": "0.0.01",
+  "private": false,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
