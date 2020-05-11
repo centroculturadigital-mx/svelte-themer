@@ -1,6 +1,6 @@
 {
-  "name": "@centroculturadigital-mx/svelte-themer",
-  "version": "0.0.0",
+  "name": "@centroculturadigital-mx/svelte-theming",
+  "version": "0.0.01",
   "private": false,
   "workspaces": ["packages/*"],
   "license": "MIT",
