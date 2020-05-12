@@ -9,8 +9,6 @@
 
   import rootProperties from './rootProperties.js'
 
-  console.log(rootProperties);
-
   const {
     getRootProperties,
     setRootProperties
