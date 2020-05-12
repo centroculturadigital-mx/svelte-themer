@@ -17,7 +17,7 @@
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.2.0",
     "svelte": "^3.19.1",
-    "svelte-themer": "*"
+    "@centroculturadigital-mx/svelte-themer": "*"
   },
   "dependencies": {
     "sirv-cli": "^0.4.5"

@@ -66,11 +66,11 @@ describe('RootProperties', () => {
         const theme = {
           properties: {
             prop_one: {
-              sub: {
-                subsub: {
-                  subsubsub: {
-                    subsubsubsub: {
-                      subsubsubsubsub_prop_one: "hello"
+              one: {
+                two: {
+                  three: {
+                    four: {
+                      prop_one: "hello"
                     }
                   }
                 }
@@ -84,7 +84,7 @@ describe('RootProperties', () => {
         let properties = getRootProperties(theme.properties)
         let result = properties[0]
           
-        result.should.eql(["--theme-prop_one-sub-subsub-subsubsub-subsubsubsub-subsubsubsubsub_prop_one","hello"])
+        result.should.eql(["--theme-prop_one-one-two-three-four-prop_one","hello"])
         
       });
 

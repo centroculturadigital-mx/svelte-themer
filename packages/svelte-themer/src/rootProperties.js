@@ -29,9 +29,8 @@ const getRootProperties = (object, prefix) => {
     
 }
 
-const setRootProperties = (object, prefix) => {
+const setRootProperties = (properties) => {
 
-    const properties = getRootProperties( object, prefix )
 
     for( property of properties ) {
 
