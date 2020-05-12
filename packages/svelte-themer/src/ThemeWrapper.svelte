@@ -7,7 +7,10 @@
   export let storageKey = '__svelte-themer__theme'
 
 
-  import setRootProperties from '../'
+  import {
+    getRootProperties,
+    setRootProperties
+  } from './rootProperties'
 
 
   // internal state, useful for quickly setting CSS vars without subscribing
@@ -44,8 +47,10 @@
       // updatte cached theme choice
       localStorage.setItem(storageKey, _current)
       // update CSS vars
-      setRootProperties(getCurrentTheme(_current));
-    }
+      const properties = getRootProperties(getCurrentTheme(_current))
+    
+      setRootProperties(properties)    }
+
   })
 
 
@@ -66,8 +71,11 @@
       localStorage.setItem(storageKey, _current)
     }
     // set CSS vars on mount
-    setRootProperties(base)
-    setRootProperties(getCurrentTheme(_current))
+    // setRootProperties(base)
+    const properties = getRootProperties(getCurrentTheme(_current))
+    
+    setRootProperties(properties)
+    
   })
 
   // sets CSS vars for easy use in components

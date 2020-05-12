@@ -35,8 +35,7 @@ const setRootProperties = (object, prefix) => {
 
     for( property of properties ) {
 
-      console.log(property)
-      // document.documentElement.style.setProperty(property[0], property[1]);
+      document.documentElement.style.setProperty(property[0], property[1]);
 
     }
 
