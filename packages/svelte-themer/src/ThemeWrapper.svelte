@@ -74,7 +74,7 @@
     }
     // set CSS vars on mount
     // setRootProperties(base)
-    const properties = getRootProperties(getCurrentTheme(_current))
+    const properties = getRootProperties(getCurrentTheme(_current).properties)
     
     setRootProperties(properties)
     
@@ -87,8 +87,8 @@
 
 <style>
   :global(html) {
-    background-color: var(--theme-name-properties-colors-background-text-primary-primary_dark-secondary);
-    color: var(--theme-name-properties-colors-text);
+    background-color: var(--theme-colors-background);
+    color: var(--theme-colors-text);
   }
 </style>
 

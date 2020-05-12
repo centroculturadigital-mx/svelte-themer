@@ -5,10 +5,10 @@ const getRootProperties = (object, prefix) => {
     let varString
 
     if( ! prefix ) {
-      varString = `--theme`
-    } else {
-      varString = prefix
+      prefix = `--theme`
     }
+    
+    varString = prefix
     
     for (let [key, value] of Object.entries(object)) {
 
@@ -22,6 +22,8 @@ const getRootProperties = (object, prefix) => {
       properties.push([
         varString, value
       ])
+
+      varString = prefix
 
     }
 
