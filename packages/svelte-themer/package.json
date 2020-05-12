@@ -1,6 +1,6 @@
 {
   "name": "@centroculturadigital-mx/svelte-themer",
-  "version": "0.0.034",
+  "version": "0.0.035",
   "svelte": "src/index.js",
   "private": false,
   "module": "dist/index.mjs",

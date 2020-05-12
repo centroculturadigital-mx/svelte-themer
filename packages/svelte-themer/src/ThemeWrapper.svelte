@@ -49,7 +49,7 @@
       // updatte cached theme choice
       localStorage.setItem(storageKey, _current)
       // update CSS vars
-      const properties = getRootProperties(getCurrentTheme(_current))
+      const properties = getRootProperties(getCurrentTheme(_current).properties)
     
       setRootProperties(properties)    }
 
