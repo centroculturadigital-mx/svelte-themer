@@ -16,13 +16,12 @@ const getRootProperties = (object, prefix) => {
       
       if( typeof value === "object" ) {
         properties = [...properties,... getRootProperties( value, varString )]
-        return properties
+      } else {
+        properties.push([
+          varString, value
+        ])
       }
-
-      properties.push([
-        varString, value
-      ])
-
+        
       varString = prefix
 
     }

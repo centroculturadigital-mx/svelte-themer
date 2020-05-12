@@ -5,55 +5,43 @@
   {
     name: 'light',
     properties: {
+      fonts: {
+        primary: "Arial",
+        secondary: "Courier",
+      },
       colors: {
+        subsel: {
+          a: "#fa0",
+          b: "#0ab",
+        },
         text: '#282230',
         background: '#f1f1f1',
         primary: '#01796f',
         primary_dark: '#016159',
         secondary: '#562931',
-      }
+      },
     },
   },
   {
     name: 'dark',
     properties: {
+      fonts: {
+        primary: "Courier",
+        secondary: "Arial",
+      },
       colors: {
         text: '#f1f1f1',
         background: '#27323a',
         primary: '#01978b',
         primary_dark: '#00887c',
         secondary: '#fe8690',
-      }
+      },
     },
-  },
-  {
-    name: 'forest',
-    properties: {
-      colors: {
-        background: '#3b6c4c',
-        text: '#f9f2cf',
-        primary: '#efdc7e',
-        primary_dark: '#e4d589',
-        secondary: '#4a875f',
-      }
-    },
-  },
-  {
-    name: 'discord',
-    properties: {
-      colors: {
-        background: '#2C2F33',
-        text: '#FFFFFF',
-        primary: '#7289DA',
-        primary_dark: '#7289DA',
-        secondary: '#99AAB5',
-      }
-    },
-  },
+  }
 ]
 </script>
 
-<ThemeWrapper>
+<ThemeWrapper {themes}>
   <main>
     <div class="rail">
       <h1>Svelte Themer</h1>
@@ -112,18 +100,21 @@
   }
 
 	h1 {
-		color: var(--theme-text);
+		color: var(--theme-colors-text);
 		text-transform: lowercase;
 		font-size: 4em;
     font-weight: 200;
     margin: 0;
+
+    font-family: var(--theme-fonts-primary);
   }
   
   a {
-    color: var(--theme-primary)
+    color: var(--theme-colors-primary);
+    font-family: var(--theme-fonts-secondary);
   }
   a:visited {
-    color: var(--theme-primary_dark)
+    color: var(--theme-colors-primary_dark)
   }
 
 	@media (min-width: 640px) {

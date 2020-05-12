@@ -87,8 +87,35 @@ describe('RootProperties', () => {
         result.should.eql(["--theme-prop_one-one-two-three-four-prop_one","hello"])
         
       });
-
     });
+    describe('Parsing', () => {
+      it('creates vars for all sub-objects', () => {
+        
+
+
+        const theme = {
+          properties: {
+            colors: {
+              primary: "#fa0"
+            },
+            fonts: {
+              primary: "Arial"
+            },
+            spacing: {
+              one: "1rem"
+            },
+          }
+        }
+
+        
+        let properties = getRootProperties(theme.properties)
+        let result = properties[2]
+          
+        result.should.eql(["--theme-spacing-one","1rem"])
+        
+      });
+    });
+
 
   });
 });

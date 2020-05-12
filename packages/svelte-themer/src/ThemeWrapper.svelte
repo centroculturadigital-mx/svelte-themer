@@ -51,7 +51,8 @@
       // update CSS vars
       const properties = getRootProperties(getCurrentTheme(_current).properties)
     
-      setRootProperties(properties)    }
+      setRootProperties(properties)
+    }
 
   })
 
