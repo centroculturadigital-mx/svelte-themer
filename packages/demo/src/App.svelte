@@ -1,5 +1,5 @@
 <script>
-  import { ThemeWrapper, ThemeToggle } from 'svelte-themer'
+  import { ThemeWrapper, ThemeToggle } from '@centroculturadigital-mx/svelte-themer'
 
   const themes = [
   {

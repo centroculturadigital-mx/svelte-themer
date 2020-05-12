@@ -14,7 +14,7 @@
   const {
     getRootProperties,
     setRootProperties
-  } = properties
+  } = rootProperties
 
 
   // internal state, useful for quickly setting CSS vars without subscribing
