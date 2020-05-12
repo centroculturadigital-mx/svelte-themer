@@ -1,11 +1,13 @@
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
-import pkg from './package.json'
+import commonjs from 'rollup-plugin-commonjs';
 
+import autoNamedExports from 'rollup-plugin-auto-named-exports'
+import pkg from './package.json'
 const name = pkg.name
-  .replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
-  .replace(/^\w/, m => m.toUpperCase())
-  .replace(/-\w/g, m => m[1].toUpperCase())
+.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
+.replace(/^\w/, m => m.toUpperCase())
+.replace(/-\w/g, m => m[1].toUpperCase())
 
 export default {
   input: 'src/index.js',
@@ -13,5 +15,12 @@ export default {
     { file: pkg.module, format: 'es' },
     { file: pkg.main, format: 'umd', name },
   ],
-  plugins: [svelte(), resolve()],
+  plugins: [
+    svelte(),
+    resolve(),
+    commonjs({
+      namedExports: {}
+    }),
+    autoNamedExports()
+  ],
 }

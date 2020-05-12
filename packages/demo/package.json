@@ -10,14 +10,14 @@
     "now-build": "yarn build"
   },
   "devDependencies": {
-    "rollup": "^1.32.0",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@centroculturadigital-mx/svelte-themer": "0.0.2",
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^1.32.0",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.2.0",
-    "svelte": "^3.19.1",
-    "@centroculturadigital-mx/svelte-themer": "*"
+    "svelte": "^3.19.1"
   },
   "dependencies": {
     "sirv-cli": "^0.4.5"

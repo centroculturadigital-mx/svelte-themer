@@ -42,7 +42,9 @@ const setRootProperties = (properties) => {
     
 }
 
-export default {
+const rootProperties = {
   getRootProperties,
   setRootProperties
 }
+
+module.exports = rootProperties
