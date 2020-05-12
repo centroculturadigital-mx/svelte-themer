@@ -32,7 +32,7 @@ const getRootProperties = (object, prefix) => {
 const setRootProperties = (properties) => {
 
 
-    for( property of properties ) {
+    for( const property of properties ) {
 
       document.documentElement.style.setProperty(property[0], property[1]);
 
