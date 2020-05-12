@@ -10,7 +10,7 @@
     "now-build": "yarn build"
   },
   "devDependencies": {
-    "@centroculturadigital-mx/svelte-themer": "0.0.31",
+    "@centroculturadigital-mx/svelte-themer": "0.0.32",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "rollup": "^1.32.0",

@@ -89,8 +89,8 @@
 
 <style>
   :global(html) {
-    background-color: var(--theme-background);
-    color: var(--theme-text);
+    background-color: var(--theme-name-properties-colors-background-text-primary-primary_dark-secondary);
+    color: var(--theme-name-properties-colors-text);
   }
 </style>
 
