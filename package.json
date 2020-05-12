@@ -2,9 +2,18 @@
   "name": "@centroculturadigital-mx/svelte-themer",
   "version": "0.0.0",
   "private": false,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^7.1.1"
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "mocha": "^7.1.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
   }
 }

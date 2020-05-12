@@ -5,6 +5,11 @@
   // setup initial theming
   export let themes = [...presets]
   export let storageKey = '__svelte-themer__theme'
+
+
+  import setRootProperties from '../'
+
+
   // internal state, useful for quickly setting CSS vars without subscribing
   let _current = themes[0].name
   // temporary
@@ -14,8 +19,10 @@
   }
 
   export let base = {
-    colors: {
-      text: '#282230',
+    properties: {
+      colors: {
+        text: '#282230',
+      },
     },
     prefix: 'base',
   }
@@ -37,7 +44,7 @@
       // updatte cached theme choice
       localStorage.setItem(storageKey, _current)
       // update CSS vars
-      setRootColors(getCurrentTheme(_current));
+      setRootProperties(getCurrentTheme(_current));
     }
   })
 
@@ -59,22 +66,13 @@
       localStorage.setItem(storageKey, _current)
     }
     // set CSS vars on mount
-    setRootColors(base)
-    setRootColors(getCurrentTheme(_current))
+    setRootProperties(base)
+    setRootProperties(getCurrentTheme(_current))
   })
 
   // sets CSS vars for easy use in components
   // ex: var(--theme-background)
-  const setRootColors = theme => {
-    for (let [prop, color] of Object.entries(theme.colors)) {
-      let varString = `--theme-${prop}`
-      if (theme.prefix) {
-        varString = `--theme-${theme.prefix}-${prop}`
-      }
-      document.documentElement.style.setProperty(varString, color);
-    }
-    document.documentElement.style.setProperty('--theme-name', theme.name);
-  }
+  
 </script>
 
 <style>
