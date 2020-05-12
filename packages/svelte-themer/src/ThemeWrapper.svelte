@@ -7,10 +7,14 @@
   export let storageKey = '__svelte-themer__theme'
 
 
-  import {
+  import rootProperties from './rootProperties.js'
+
+  console.log(rootProperties);
+
+  const {
     getRootProperties,
     setRootProperties
-  } from './rootProperties'
+  } = properties
 
 
   // internal state, useful for quickly setting CSS vars without subscribing
