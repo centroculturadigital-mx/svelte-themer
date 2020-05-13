@@ -1,58 +1,60 @@
 <script>
-  import { ThemeWrapper, ThemeToggle } from '@centroculturadigital-mx/svelte-themer'
+  import {
+    ThemeWrapper,
+    ThemeToggle
+  } from "@centroculturadigital-mx/svelte-themer";
 
   const themes = [
-  {
-    name: 'light',
-    properties: {
-      fonts: {
-        primary: "Arial",
-        secondary: "Courier",
-      },
-      colors: {
-        subsel: {
-          a: "#fa0",
-          b: "#0ab",
+    {
+      name: "lightX",
+      properties: {
+        fonts: {
+          families: {
+            primary:
+              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+            secondary:
+              "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          },
+          primary: "Open Sans",
+          secondary: "Oswald"
         },
-        text: '#282230',
-        background: '#f1f1f1',
-        primary: '#01796f',
-        primary_dark: '#016159',
-        secondary: '#562931',
-      },
+        colors: {
+          subsel: {
+            a: "#fa0",
+            b: "#0ab"
+          },
+          text: "#282230",
+          background: "#f1f1f1",
+          primary: "#01796f",
+          primary_dark: "#016159",
+          secondary: "#562931"
+        }
+      }
     },
-  },
-  {
-    name: 'dark',
-    properties: {
-      fonts: {
-        primary: "Courier",
-        secondary: "Arial",
-      },
-      colors: {
-        text: '#f1f1f1',
-        background: '#27323a',
-        primary: '#01978b',
-        primary_dark: '#00887c',
-        secondary: '#fe8690',
-      },
-    },
-  }
-]
+    {
+      name: "dark X",
+      properties: {
+        fonts: {
+          families: {
+            primary:
+              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+            secondary:
+              "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          },
+          primary: "Oswald",
+          secondary: "Open Sans"
+        },
+        colors: {
+          text: "#f1f1f1",
+          background: "#27323a",
+          primary: "#01978b",
+          primary_dark: "#00887c",
+          secondary: "#fe8690"
+        }
+      }
+    }
+  ];
 </script>
-
-<ThemeWrapper {themes}>
-  <main>
-    <div class="rail">
-      <h1>Svelte Themer</h1>
-      <ThemeToggle />
-    </div>
-    <div class="apps">
-      <a href="https://www.npmjs.com/package/svelte-themer">npm</a>
-      <a href="https://github.com/josefaidt/svelte-themer">github</a>
-    </div>
-  </main>
-</ThemeWrapper>
 
 <style>
   :global(body) {
@@ -60,12 +62,12 @@
     align-items: center;
   }
 
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
+  main {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
     margin: 0 auto;
-    
+
     display: grid;
     grid-auto-flow: row;
     grid-gap: 2rem;
@@ -76,7 +78,7 @@
       max-width: initial;
     }
   }
-  
+
   .rail {
     display: grid;
     grid-auto-flow: column;
@@ -99,27 +101,41 @@
     grid-gap: 3rem;
   }
 
-	h1 {
-		color: var(--theme-colors-text);
-		text-transform: lowercase;
-		font-size: 4em;
+  h1 {
+    color: var(--theme-colors-text);
+    text-transform: lowercase;
+    font-size: 4em;
     font-weight: 200;
     margin: 0;
 
     font-family: var(--theme-fonts-primary);
   }
-  
+
   a {
     color: var(--theme-colors-primary);
     font-family: var(--theme-fonts-secondary);
   }
   a:visited {
-    color: var(--theme-colors-primary_dark)
+    color: var(--theme-colors-primary_dark);
   }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  @media (min-width: 640px) {
+    main {
+      max-width: none;
+    }
+  }
 </style>
+
+<ThemeWrapper {themes}>
+
+  <main>
+    <div class="rail">
+      <h1>Svelte Themer</h1>
+      <ThemeToggle />
+    </div>
+    <div class="apps">
+      <a href="https://www.npmjs.com/package/svelte-themer">npm</a>
+      <a href="https://github.com/josefaidt/svelte-themer">github</a>
+    </div>
+  </main>
+</ThemeWrapper>
