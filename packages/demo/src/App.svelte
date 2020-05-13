@@ -35,8 +35,8 @@
       name: "dark X",
       properties: {
         fonts: {
-          primary: "Oswald",
-          secondary: "Open Sans"
+          primary: "Roboto",
+          secondary: "Lato"
         },
         colors: {
           text: "#f1f1f1",
@@ -48,9 +48,9 @@
       },
       fontFamilies: {
         primary:
-          "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+          "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
         secondary:
-          "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          "https://fonts.googleapis.com/css2?family=Lato&display=swap"
       }
     }
   ];

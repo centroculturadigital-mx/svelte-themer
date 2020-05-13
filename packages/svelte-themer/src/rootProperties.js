@@ -44,13 +44,15 @@ const setRootProperties = (properties) => {
 }
 const setRootTypographies = (families) => {
 
+
+
     for (const fam in families) {
 
-        document.head.append(`<link rel="stylesheet" href=${families[fam]} >`)
+        // document.head.append(`<link rel="stylesheet" href="${families[fam]}" >`)
 
     }
 
-    return
+    return families;
 
 }
 

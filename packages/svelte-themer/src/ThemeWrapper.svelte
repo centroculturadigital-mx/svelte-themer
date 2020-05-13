@@ -8,8 +8,11 @@
 
   import rootProperties from "./rootProperties.js";
 
-  const { getRootProperties, setRootProperties, setRootTypographies } = rootProperties;
-  
+  const {
+    getRootProperties,
+    setRootProperties,
+    setRootTypographies
+  } = rootProperties;
 
   // internal state, useful for quickly setting CSS vars without subscribing
   let _current = themes[0].name;
@@ -52,12 +55,14 @@
       );
 
       setRootProperties(properties);
-      // 
-      let typographies = themes[_currentIndex].fontFamilies;
+      //
+      let typographies = getCurrentTheme(_current).fontFamilies
 
-      setRootTypographies(typographies);
+      links = setRootTypographies(typographies);
     }
   });
+
+ let links = [];
 
   onMount(() => {
     let storedThemeChoice = localStorage.getItem(storageKey);
@@ -83,6 +88,12 @@
     const properties = getRootProperties(getCurrentTheme(_current).properties);
 
     setRootProperties(properties);
+
+    //
+    const typographies = getCurrentTheme(_current).fontFamilies
+    
+    links = setRootTypographies(typographies);
+
   });
 
   // sets CSS vars for easy use in components
@@ -96,6 +107,11 @@
   }
 </style>
 
+<svelte:head>
+  {#each Object.values(links) as link, i}
+    <link  href={link} rel="stylesheet" type="text/css" />
+  {/each}
+</svelte:head>
 
 <slot>
   <!-- children -->
