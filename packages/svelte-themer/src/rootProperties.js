@@ -44,10 +44,10 @@ const setRootProperties = (properties) => {
 }
 const setRootTypographies = (families) => {
 
-    console.log("PROPIEDADES", families.primary);
-
     for (const fam in families) {
-        console.log("FOR:::", fam);
+
+        document.head.append(`<link rel="stylesheet" href=${families[fam]} >`)
+
     }
 
     return
