@@ -53,7 +53,7 @@
 
       setRootProperties(properties);
       // 
-      let typographies = themes[_currentIndex].properties.fonts.families;
+      let typographies = themes[_currentIndex].fontFamilies;
 
       setRootTypographies(typographies);
     }

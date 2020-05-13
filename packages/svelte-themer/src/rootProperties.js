@@ -42,20 +42,13 @@ const setRootProperties = (properties) => {
     return
 
 }
-const setRootTypographies = (properties) => {
+const setRootTypographies = (families) => {
 
-    // let keys = Object.keys(properties);
+    console.log("PROPIEDADES", families.primary);
 
-    console.log("PROPIEDADES", properties);
-    for (const prop in properties) {
-        console.log("font primaria", prop);
+    for (const fam in families) {
+        console.log("FOR:::", fam);
     }
-
-    // properties.map((typo) => {
-    //     console.log("Font primaria", typo.primary);
-    // });
-    // console.log("font primaria", properties.primary);
-    // console.log("Font Secundaria", properties.secondary);
 
     return
 

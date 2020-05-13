@@ -9,12 +9,6 @@
       name: "lightX",
       properties: {
         fonts: {
-          families: {
-            primary:
-              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
-            secondary:
-              "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-          },
           primary: "Open Sans",
           secondary: "Oswald"
         },
@@ -29,18 +23,18 @@
           primary_dark: "#016159",
           secondary: "#562931"
         }
+      },
+      fontFamilies: {
+        primary:
+          "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+        secondary:
+          "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
       }
     },
     {
       name: "dark X",
       properties: {
         fonts: {
-          families: {
-            primary:
-              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
-            secondary:
-              "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-          },
           primary: "Oswald",
           secondary: "Open Sans"
         },
@@ -51,6 +45,12 @@
           primary_dark: "#00887c",
           secondary: "#fe8690"
         }
+      },
+      fontFamilies: {
+        primary:
+          "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+        secondary:
+          "https://fonts.googleapis.com/css2?family=Oswald&display=swap"
       }
     }
   ];
