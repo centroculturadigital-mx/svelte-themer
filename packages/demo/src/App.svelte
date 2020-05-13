@@ -48,7 +48,7 @@
       },
       fontFamilies: {
         primary:
-          "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+          "https://fonts.googleapis.com/css2?family=Merriweather&display=swap",
         secondary:
           "https://fonts.googleapis.com/css2?family=Lato&display=swap"
       }
